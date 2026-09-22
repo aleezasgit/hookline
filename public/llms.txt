@@ -1,0 +1,18 @@
+# Hookline
+> AI video studio with presets and a Campaign mode for short-form organic video.
+
+Hookline turns a photo or prompt into a short video using visual presets, and turns one brand brief into several native-feeling video hooks with AI pre-review and human approval.
+
+## Pages
+- /: preset gallery
+- /create: make a single video
+- /campaigns/new: start a campaign from a brief
+- /library: all videos in this workspace
+
+## JSON API (cookie-scoped workspace, created automatically on first request)
+- POST /api/generate: start a video
+- GET /api/generations/{id}: poll status
+- POST /api/campaigns: create a campaign from a brief
+- POST /api/campaigns/{id}/concepts: write hooks
+- POST /api/campaigns/{id}/generate: generate drafts
+- GET /api/campaigns/{id}: full campaign state
